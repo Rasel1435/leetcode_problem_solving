@@ -24,27 +24,42 @@ import collections
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        cols = collections.defaultdict(set)
+        """This line defines a method isValidSudoku inside the Solution class. The method takes a 2D list (List[List[str]])
+           representing the Sudoku board as input and returns a boolean (bool). It checks whether the given Sudoku board is valid."""
         rows = collections.defaultdict(set)
+        cols = collections.defaultdict(set)
         squares = collections.defaultdict(set)  # key = (r // 3, c // 3)
+        """Here, three defaultdicts are initialized: cols, rows, and squares. These will be used to keep track of the numbers
+           present in each column, each row, and each 3x3 subgrid of the Sudoku board, respectively."""
 
         for r in range(9):
             for c in range(9):
+        # These lines initiate nested loops to iterate over each cell in the 9x9 Sudoku board.
                 if board[r][c] == ".":
                     continue
+                """This conditional statement checks if the current cell contains a dot (.), which represents an empty cell in the Sudoku board.
+                   If it does, the loop continues to the next iteration, skipping the rest of the code for the current cell."""
                 if (
-                    board[r][c] in rows[r]
-                    or board[r][c] in cols[c]
-                    or board[r][c] in squares[(r // 3, c // 3)]
-                ):
+                    board[r][c] in rows[r] or
+                    board[r][c] in cols[c] or
+                    board[r][c] in squares[(r // 3, c // 3)]
+                    ):
                     return False
-                cols[c].add(board[r][c])
+                """ This block checks if the current number in the Sudoku board is already present in the corresponding row, column,
+                or 3x3 subgrid. If it is, the Sudoku board is invalid, and the method returns False."""
+                
                 rows[r].add(board[r][c])
+                cols[c].add(board[r][c])
                 squares[(r // 3, c // 3)].add(board[r][c])
+                """ If the current number is not present in the corresponding row, column, or subgrid,
+                it is added to the sets in cols, rows, and squares, respectively."""
 
         return True
+        """If the Sudoku board is valid, the method returns True."""
     
 if __name__ == "__main__":
+    """This line defines a main function that will be executed when the program is run."""
+    
     board = [["5","3",".",".","7",".",".",".","."]
             ,["6",".",".","1","9","5",".",".","."]
             ,[".","9","8",".",".",".",".","6","."]
@@ -54,8 +69,6 @@ if __name__ == "__main__":
             ,[".","6",".",".",".",".","2","8","."]
             ,[".",".",".","4","1","9",".",".","5"]
             ,[".",".",".",".","8",".",".","7","9"]]
+    """This line defines a 2D list representing a partially filled Sudoku board. The board is defined as a list of lists,"""
     print(Solution().isValidSudoku(board))
-    print(Solution().isValidSudoku(board))
-    print(Solution().isValidSudoku(board))
-    print(Solution().isValidSudoku(board))
-    print(Solution().isValidSudoku(board))
+    """This code defines a Sudoku board and calls the isValidSudoku method on it. The method prints the result of the method call."""
