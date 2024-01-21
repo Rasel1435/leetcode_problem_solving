@@ -21,11 +21,13 @@ If no duplicates are found in any of the rows, columns, or 3x3 grids, then the g
 ```
 from typing import List
 import collections
+```
 
-class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:
+```class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:```
         """This line defines a method isValidSudoku inside the Solution class. The method takes a 2D list (List[List[str]])
-           representing the Sudoku board as input and returns a boolean (bool). It checks whether the given Sudoku board is valid."""
+           representing the Sudoku board as input and returns a boolean (bool).
+           It checks whether the given Sudoku board is valid."""
         rows = collections.defaultdict(set)
         cols = collections.defaultdict(set)
         squares = collections.defaultdict(set)  # key = (r // 3, c // 3)
@@ -68,7 +70,7 @@ if __name__ == "__main__":
             ,[".","6",".",".",".",".","2","8","."]
             ,[".",".",".","4","1","9",".",".","5"]
             ,[".",".",".",".","8",".",".","7","9"]]
-            
+
     print(Solution().isValidSudoku(board))
     
 ```
