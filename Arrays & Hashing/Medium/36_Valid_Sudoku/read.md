@@ -5,19 +5,20 @@ each column, and each 3x3 grid must contain the digits 1-9 without repetition. S
 the intuition here is to check these three conditions for the given board.
 
 # Approach
-- 1. Check Rows: For each row in the board, check if there are any duplicate numbers (ignoring the empty cells
+- Check Rows: For each row in the board, check if there are any duplicate numbers (ignoring the empty cells
 denoted by "."). If any duplicates are found, return False.
 
-- 2. Check Columns: Similarly, for each column, check if there are any duplicate numbers.
+- Check Columns: Similarly, for each column, check if there are any duplicate numbers.
 If any duplicates are found, return False.
 
-- 3. Check 3x3 Grids: The 9x9 Sudoku board can be divided into nine 3x3 grids.
+- Check 3x3 Grids: The 9x9 Sudoku board can be divided into nine 3x3 grids.
 For each of these grids, check if there are any duplicate numbers. If any duplicates are found, return False.
    
 If no duplicates are found in any of the rows, columns, or 3x3 grids, then the given board is a valid Sudoku board, so return True.
 """
 
-
+# Code 
+{
 from typing import List
 import collections
 
@@ -71,3 +72,4 @@ if __name__ == "__main__":
     """This line defines a 2D list representing a partially filled Sudoku board. The board is defined as a list of lists,"""
     print(Solution().isValidSudoku(board))
     """This code defines a Sudoku board and calls the isValidSudoku method on it. The method prints the result of the method call."""
+}
