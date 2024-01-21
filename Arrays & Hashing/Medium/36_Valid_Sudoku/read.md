@@ -68,8 +68,7 @@ if __name__ == "__main__":
             ,[".","6",".",".",".",".","2","8","."]
             ,[".",".",".","4","1","9",".",".","5"]
             ,[".",".",".",".","8",".",".","7","9"]]
-
-    """This line defines a 2D list representing a partially filled Sudoku board. The board is defined as a list of lists,"""
+            
     print(Solution().isValidSudoku(board))
-    """This code defines a Sudoku board and calls the isValidSudoku method on it. The method prints the result of the method call."""
+    
 ```
