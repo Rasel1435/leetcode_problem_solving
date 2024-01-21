@@ -30,9 +30,11 @@ class Solution:
         """This line defines a method isValidSudoku inside the Solution class. The method takes a 2D list (List[List[str]])
            representing the Sudoku board as input and returns a boolean (bool).
            It checks whether the given Sudoku board is valid."""
+        ```
         rows = collections.defaultdict(set)
         cols = collections.defaultdict(set)
         squares = collections.defaultdict(set)  # key = (r // 3, c // 3)
+        ```
         """Here, three defaultdicts are initialized: cols, rows, and squares. These will be used to keep track of the numbers
            present in each column, each row, and each 3x3 subgrid of the Sudoku board, respectively."""
 
