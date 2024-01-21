@@ -1,11 +1,15 @@
 
 """Intuition
-The problem is asking to validate a partially filled Sudoku board. The rules of Sudoku state that each row, each column, and each 3x3 grid must contain the digits 1-9 without repetition. So, the intuition here is to check these three conditions for the given board.
+The problem is asking to validate a partially filled Sudoku board. The rules of Sudoku state that each row,
+each column, and each 3x3 grid must contain the digits 1-9 without repetition. So,
+the intuition here is to check these three conditions for the given board.
 
 Approach
-Check Rows: For each row in the board, check if there are any duplicate numbers (ignoring the empty cells denoted by ‘.’). If any duplicates are found, return False.
+Check Rows: For each row in the board, check if there are any duplicate numbers (ignoring the empty cells denoted by ".").
+If any duplicates are found, return False.
 Check Columns: Similarly, for each column, check if there are any duplicate numbers. If any duplicates are found, return False.
-Check 3x3 Grids: The 9x9 Sudoku board can be divided into nine 3x3 grids. For each of these grids, check if there are any duplicate numbers. If any duplicates are found, return False.
+Check 3x3 Grids: The 9x9 Sudoku board can be divided into nine 3x3 grids. For each of these grids, check if there are any duplicate numbers.
+If any duplicates are found, return False.
 If no duplicates are found in any of the rows, columns, or 3x3 grids, then the given board is a valid Sudoku board, so return True.
 """
 
