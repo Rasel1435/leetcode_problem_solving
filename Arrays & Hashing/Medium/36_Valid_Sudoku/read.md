@@ -17,8 +17,8 @@ For each of these grids, check if there are any duplicate numbers. If any duplic
 If no duplicates are found in any of the rows, columns, or 3x3 grids, then the given board is a valid Sudoku board, so return True.
 """
 
-# Code 
-'''
+# Code:
+```
 from typing import List
 import collections
 
@@ -72,4 +72,4 @@ if __name__ == "__main__":
     """This line defines a 2D list representing a partially filled Sudoku board. The board is defined as a list of lists,"""
     print(Solution().isValidSudoku(board))
     """This code defines a Sudoku board and calls the isValidSudoku method on it. The method prints the result of the method call."""
-'''
+```
