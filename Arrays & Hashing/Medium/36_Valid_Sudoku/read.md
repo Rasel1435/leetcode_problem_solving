@@ -23,8 +23,10 @@ from typing import List
 import collections
 ```
 
-```class Solution:
-    def isValidSudoku(self, board: List[List[str]]) -> bool:```
+```
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+```
         """This line defines a method isValidSudoku inside the Solution class. The method takes a 2D list (List[List[str]])
            representing the Sudoku board as input and returns a boolean (bool).
            It checks whether the given Sudoku board is valid."""
