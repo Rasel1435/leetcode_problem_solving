@@ -25,3 +25,22 @@ class Solution:
             countT[t[i]] = 1 + countT.get(t[i], 0)
             
         return countS == countT
+    
+    
+# another way 
+from collections import Counter
+class Soluation:
+    def __init__(self, s: str, t: str) -> None:
+        self.s = s
+        self.t = t
+    def isAnagram(self) -> bool:
+        return sorted(self.s) == sorted(self.t)
+        return Counter(self.s) == Counter(self.t)
+        
+if __name__ == '__main__':
+    s = input()
+    print(f'S: {s} ')
+    t = input()
+    print(f'T: {t} ')
+    sol = Soluation(s, t)
+    print(sol.isAnagram())
